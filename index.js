@@ -7,12 +7,12 @@ app.use(express.urlencoded({ extended: false }));
 var data = null;
 
 app.get("/", (req, res) => {
-  res.json(data);
+  res.send("Data on Database:", data);
 });
 
 app.post("/", (req, res) => {
   data = req.body;
-  res.send(data);
+  res.send("Data Received:", data);
 });
 
 app.listen(process.env.PORT || 3000);
