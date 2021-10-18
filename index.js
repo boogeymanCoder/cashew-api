@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-var data = { data: "None" };
+var data = {};
 
 app.get("/", (req, res) => {
   res.send(`Data on Database: ${JSON.stringify(data)}`);
